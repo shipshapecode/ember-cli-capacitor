@@ -5,11 +5,15 @@ const { execSync } = require('child_process');
 module.exports = {
   description: 'Sets up Capacitor for your Ember app.',
 
-  afterInstall() {
-    this.addPackagesToProject([
+  normalizeEntityName() {},
+
+  async afterInstall() {
+    await this.addPackagesToProject([
       { name: '@capacitor/core' },
       { name: '@capacitor/cli' }
     ]);
+
+    await this._addPlatforms();
   },
 
   /**
@@ -17,7 +21,7 @@ module.exports = {
    * @returns {Promise} Resolves into array of selected platforms
    * @private
    */
-  _addPlatforms() {
+  async _addPlatforms() {
     let choices = [
       {
         checked: true,
@@ -36,17 +40,16 @@ module.exports = {
       }
     ];
 
-    // Ask which npm packages to install
-    return this.ui.prompt({
+    // Ask which platforms to support
+    const selected = await this.ui.prompt({
       type: 'checkbox',
       name: 'platforms',
       message: 'Which platforms would you like to support?',
       choices
-    })
-      .then((selected) => {
-        selected.platforms.forEach((platform)=>{
-          execSync(`npx cap add ${platform}`);
-        });
-      });
+    });
+
+    selected.platforms.forEach((platform) => {
+      execSync(`npx cap add ${platform}`);
+    });
   }
 };
