@@ -1,3 +1,11 @@
+## v0.0.3 (2020-06-25)
+
+#### :rocket: Enhancement
+* [#2](https://github.com/shipshapecode/ember-cli-capacitor/pull/2) Add initial iOS commands ([@rwwagner90](https://github.com/rwwagner90))
+
+#### Committers: 1
+- Robert Wagner ([@rwwagner90](https://github.com/rwwagner90))
+
 ## v0.0.2 (2020-06-24)
 
 #### :rocket: Enhancement
