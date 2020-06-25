@@ -1,7 +1,7 @@
 ember-cli-capacitor
 ==============================================================================
 
-[Short description of the addon.]
+This addon integrates Ember and Capacitor.
 
 
 Compatibility
@@ -23,7 +23,15 @@ ember install ember-cli-capacitor
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+### Commands
+
+```
+ember ios:serve
+```
+
+```
+ember ios:build
+```
 
 
 Contributing
