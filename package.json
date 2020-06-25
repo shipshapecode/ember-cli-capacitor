@@ -1,9 +1,13 @@
 {
   "name": "ember-cli-capacitor",
   "version": "0.0.3",
-  "description": "Add capacitor to your Ember apps.",
+  "description": "Adds native iOS, Android, and Electron support to Ember with Capacitor.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "capacitor",
+    "iOS",
+    "android",
+    "electron"
   ],
   "repository": {
     "type": "git",
