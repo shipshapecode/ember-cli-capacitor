@@ -5,7 +5,8 @@ module.exports = {
 
   includedCommands() {
     return {
-      'ios': require('./lib/commands/ios')
+      'ios:build': require('./lib/commands/ios-build'),
+      'ios:serve': require('./lib/commands/ios-serve')
     };
   },
 
