@@ -56,6 +56,12 @@ ember android:serve
 ember android:build
 ```
 
+Electron
+------------------------------------------------------------------------------
+
+The Electron setup for Capacitor does not have the ability to live reload.
+We are working on making a more robust Electron integration, but in the meantime,
+using [ember-electron](https://github.com/adopted-ember-addons/ember-electron) may be best.
 
 Contributing
 ------------------------------------------------------------------------------
