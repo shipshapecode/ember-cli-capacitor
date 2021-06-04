@@ -49,7 +49,7 @@ module.exports = {
     });
 
     for (const platform of selected.platforms) {
-      await this.addPackagesToProject([{ name: `@capacitor/{platform}` }]);
+      await this.addPackagesToProject([{ name: `@capacitor/${platform}` }]);
       execSync(`npx cap add ${platform}`);
     }
   },
