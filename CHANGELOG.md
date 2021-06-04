@@ -1,3 +1,11 @@
+## v0.0.5 (2021-06-04)
+
+#### :rocket: Enhancement
+* [#3](https://github.com/shipshapecode/ember-cli-capacitor/pull/3) Ember 3.20 ([@rwwagner90](https://github.com/rwwagner90))
+
+#### Committers: 1
+- Robert Wagner ([@rwwagner90](https://github.com/rwwagner90))
+
 ## v0.0.4 (2020-06-25)
 
 #### :rocket: Enhancement
