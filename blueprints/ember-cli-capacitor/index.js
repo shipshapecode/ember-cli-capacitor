@@ -10,7 +10,7 @@ module.exports = {
   async afterInstall() {
     await this.addPackagesToProject([
       { name: '@capacitor/core' },
-      { name: '@capacitor/cli' }
+      { name: '@capacitor/cli' },
     ]);
 
     await this._addPlatforms();
@@ -26,18 +26,18 @@ module.exports = {
       {
         checked: true,
         name: 'iOS',
-        value: 'ios'
+        value: 'ios',
       },
       {
         checked: true,
         name: 'Android',
-        value: 'android'
+        value: 'android',
       },
       {
         checked: true,
         name: 'Electron',
-        value: 'electron'
-      }
+        value: 'electron',
+      },
     ];
 
     // Ask which platforms to support
@@ -45,11 +45,11 @@ module.exports = {
       type: 'checkbox',
       name: 'platforms',
       message: 'Which platforms would you like to support?',
-      choices
+      choices,
     });
 
     selected.platforms.forEach((platform) => {
       execSync(`npx cap add ${platform}`);
     });
-  }
+  },
 };
