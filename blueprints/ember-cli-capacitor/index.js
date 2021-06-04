@@ -48,8 +48,9 @@ module.exports = {
       choices,
     });
 
-    selected.platforms.forEach((platform) => {
+    for (const platform of selected.platforms) {
+      await this.addPackagesToProject([{ name: `@capacitor/{platform}` }]);
       execSync(`npx cap add ${platform}`);
-    });
+    }
   },
 };
